@@ -14,15 +14,13 @@
 # limitations under the License.
 #
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+include $(CLEAR_VARS)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := j5nlte
-PRODUCT_NAME := omni_j5nlte
-PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-J500FN
-PRODUCT_MANUFACTURER := samsung
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := init_j5lte.cpp
+LOCAL_MODULE := libinit_j5lte
+LOCAL_STATIC_LIBRARIES := libbase
+
+include $(BUILD_STATIC_LIBRARY)

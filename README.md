@@ -7,7 +7,7 @@
 
 2. Clone this repository to `device/samsung/j5lte`
 ```
-git clone https://github.com/prototype74/android_device_samsung_j5lte.git -b android-8.1 device/samsung/j5lte
+git clone https://github.com/prototype74/android_device_samsung_j5lte.git -b android-8.1-sdc2 device/samsung/j5lte
 ```
 
 3. Build the recovery image
